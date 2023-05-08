@@ -1,5 +1,6 @@
 # python-api-challenge-Module 6 Challenge
 Goal: Analyze weather data to find the most suitable location for a vacation.
 
-We find the relationship between the latitude, temperature, humidity, cloudiness, and windspeed.
-Then we figure out which locations have our desired weather and the closest hotel to the marked location. The data is displayed through a map after running the cells on Jupyter Notebook.
+In Part 1: WeatherPy, I made a Python script that visualized weather data for over 500 cities, using citipy and OpenWeatherMap API. I created scatter plots for the relationships between latitude and temperature, humidity, cloudiness, and wind speed, and computed linear regression for each relationship. I split the plots into Northern and Southern Hemispheres, and included the regression line, formula, and r values in each plot. After each pair of plots, I described any noticed relationships and findings.
+
+In Part 2: VacationPy, I used geoViews Python library and Geoapify API to plan future vacations. I imported the required libraries and loaded the CSV file with weather and coordinates data from Part 1. I created a map that displayed each city in city_data_df DataFrame, with the size of each point indicating the humidity of the city. I narrowed down the DataFrame to find my ideal weather condition and created a new DataFrame called hotel_df to store city, country, coordinates, and humidity. For each city, I used the Geoapify API to find the first hotel located within 10,000 meters of my coordinates and added the hotel name and country as additional information in the hover message for each city on the map.
